@@ -1,0 +1,16 @@
+namespaces:
+  - default
+  - kube-public
+  - kube-node-lease
+
+system_resources:
+  - service
+  - NAME
+  - kube-system 
+
+allowed_ports:
+  - 6443  # Kubernetes API server
+
+allowed_protocols:
+  - TCP
+

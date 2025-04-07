@@ -1,0 +1,28 @@
+name: stig-checker
+base: core22
+version: '1.0'
+summary: Kubernetes DISA STIG validation tool
+description: |
+  This tool performs automated checks against DISA STIGs for Kubernetes clusters,
+  including privileged port checks, secret usage, and more.
+
+grade: devel
+confinement: classic
+
+apps:
+  stig-checker:
+    command: bin/stig-checker
+
+parts:
+  stig-checker:
+    plugin: nil
+    source: .
+    override-build: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      cp stig-checker $SNAPCRAFT_PART_INSTALL/bin/stig-checker
+      cp stig_checker.py $SNAPCRAFT_PART_INSTALL/
+      cp config.yaml $SNAPCRAFT_PART_INSTALL/
+    build-packages:
+      - python3
+    stage-packages:
+      - python3
