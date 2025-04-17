@@ -8,7 +8,7 @@ Packaged as a Snap for easy installation and cross-distro usage.
 
 ## 📋 Features
 
-- ✅ **V-242383**: Emsure no user created resources exist on default namespaces
+- ✅ **V-242383**: Ensure no user created resources exist on default namespaces
 - ✅ **V-242414**: Detect user pods exposing privileged ports (<1024)
 - ✅ **V-242415**: Warn if secrets are exposed in environment variables
 - ✅ **V-254800**: Check for Pod Security Admission configuration
